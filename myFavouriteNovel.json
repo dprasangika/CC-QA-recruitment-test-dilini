@@ -1,0 +1,69 @@
+{
+    "title": "Fairytale",
+    "author": "Danielle Steel",
+    "publishers": [
+      "Macmillan",
+      "Pan Books"
+    ],
+    "dateOfPublished": "10-10-2017",
+    "isbn_10": "1509800557",
+    "isbn_13": "978-1509800551",
+    "formats": [
+      "Hardcover",
+      "Paperback",
+      "Kindle Edition",
+      "Audiobook",
+      "Audio CD"
+    ],
+    "price": [
+      {
+        "retailer": "amazon",
+        "price": 4.09,
+        "currency":"GBP"
+      },
+      {
+        "retailer": "whsmith",
+        "price": 5.75,
+        "currency":"GBP"
+      },
+      {          
+        "retailer": "waterstones",
+        "price": 7.99,
+        "currency":"GBP"
+      }
+    ],
+    "language": "English",
+    "totalPages": 331,
+    "chapters": [
+      {
+        "chapterNo": 1,
+        "title": null,
+        "pageFrom": 1,
+        "pageTo": 22
+      },
+      {
+        "chapterNo": 2,
+        "title": null,
+        "pageFrom": 23,
+        "pageTo": 31
+      },
+      {
+        "chapterNo": 3,
+        "title": null,
+        "pageFrom": 32,
+        "pageTo": 48
+      },
+      {
+        "chapterNo": 4,
+        "title": null,
+        "pageFrom": 49,
+        "pageTo": 72
+      },
+      {
+        "chapterNo": 5,
+        "title": null,
+        "pageFrom": 73,
+        "pageTo": 86
+      }
+    ]
+  }
