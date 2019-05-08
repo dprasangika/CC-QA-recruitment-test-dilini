@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="Features\Login\LoginSteps.cs" />
     <Compile Include="Features\Login\LogoutSteps.cs" />
+    <Compile Include="TestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

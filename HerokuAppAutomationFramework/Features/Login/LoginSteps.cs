@@ -8,27 +8,26 @@ namespace HerokuAppAutomationFramework.Features.Login
 {
     [Binding]
     [Scope(Tag = "login")]
-    public class LoginSteps
+    public class LoginSteps : TestBase
     {
-        IWebDriver driver;
+        
 
         [BeforeScenario]
         public void TestInitialize()
         {
-            driver = new ChromeDriver();
+            Initialize();
         }
 
         [Given(@"I am on Login page")]
         public void GivenIAmOnLoginPage()
         {
-            driver.Navigate().GoToUrl("http://the-internet.herokuapp.com/login");
+            Navigate();
         }
-        
+
         [When(@"I enter '(.*)' for Username and '(.*)' for Password")]
         public void WhenIEnterForUsernameAndForPassword(string username, string password)
         {
-            driver.FindElement(By.Id("username")).SendKeys(username);
-            driver.FindElement(By.Id("password")).SendKeys(password);
+            Login(username, password);
         }
         
         [When(@"I click Login button")]
@@ -40,7 +39,8 @@ namespace HerokuAppAutomationFramework.Features.Login
         [Then(@"I should see successful login message")]
         public void ThenIShouldSeeSuccessfulLoginMessage()
         {
-            Assert.IsTrue(driver.FindElement(By.CssSelector(".flash.success")).Displayed);
+            var successMessage = driver.FindElement(By.CssSelector(".flash.success"));
+            Assert.IsTrue(successMessage.Displayed);
         }
         
         [Then(@"I should see Logout button")]
@@ -52,7 +52,8 @@ namespace HerokuAppAutomationFramework.Features.Login
         [Then(@"I should see invalid password message")]
         public void ThenIShouldSeeInvalidPasswordMessage()
         {
-            Assert.IsTrue(driver.FindElement(By.CssSelector(".flash.error")).Displayed);
+            var passwordErrorMessage = driver.FindElement(By.CssSelector(".flash.error"));
+            Assert.IsTrue(passwordErrorMessage.Displayed);
         }
         
         [Then(@"I should see Login button")]
@@ -64,7 +65,8 @@ namespace HerokuAppAutomationFramework.Features.Login
         [Then(@"I should see invalid username message")]
         public void ThenIShouldSeeInvalidUsernameMessage()
         {
-            Assert.IsTrue(driver.FindElement(By.CssSelector(".flash.error")).Displayed);
+            var usernameErrorMessage = driver.FindElement(By.CssSelector(".flash.error"));
+            Assert.IsTrue(usernameErrorMessage.Displayed);
         }
 
         [AfterScenario]
