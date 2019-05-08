@@ -5,6 +5,12 @@ This repository includes the answers for all the Tasks of CC-QA-recruitment-test
 
 HerokuAppAutomationFramework is the solution for Task 2 and it can run in both Visual Studio 2017 & 2019.
 
+## Frameworks and tools used
+**Web automation framework:** Selenium WebDriver<br>
+**BDD automation framework:** SpecFlow<br>
+**Languages used:** Gherkin, C#<br>
+**Software development platform:** .Net framework
+
 ## Prerequisites
 #### For Visual Studio 2017
 
